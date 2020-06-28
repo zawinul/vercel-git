@@ -8,7 +8,7 @@ module.exports = (req, res) => {
 	try {
 
 		res.json({
-			result: fattoriale(req.params.x - 0)
+			result: fattoriale(req.query.x - 0)
 		});
 
 	}
