@@ -9,9 +9,19 @@
 		crossorigin="anonymous">
 	</script>
 	<title>prova vercel git</title>
+	<script>
+		function onStart(){
+			var x = Math.floor(Math.random()*100+1);
+			$.getJSON("api/fattoriale/"+x).then(function(data) {
+				$('.out').text(x+"! = "+data.result);
+			});
+		}
+		$(onStart);
+	</script>
 </head>
 <body>
 	<h1>
 		prova vercel git 2
 	</h1>
+	<div class="out"></div>
 </body>
