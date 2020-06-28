@@ -15,11 +15,13 @@
 
 		function onStart(){
 			var x = Math.floor(Math.random()*100+1);
-			$.getJSON("api/fattoriale?x="+x).then(function(data) {
-				$('.out').text(x+"! = "+data.result);
+			var u1 = "api/fattoriale?x="+x;
+			$.getJSON(u1).then(function(data) {
+				$('.out').text(u1+": "+x+"! = "+data.result);
 			});
-			$.getJSON("api/fattoriale2/"+x).then(function(data) {
-				$('.out2').text(x+"! = "+data.result);
+			var u2 = "api/fattoriale2/"+x;
+			$.getJSON(u2).then(function(data) {
+				$('.out2').text(u2+": "+x+"! = "+data.result);
 			});
 		}
 		$(onStart);
