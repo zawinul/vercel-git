@@ -1,7 +1,9 @@
 module.exports = (req, res) => {
-	res.json({
-		result:req.parameters,
-		saluti:'ciao!'
+	try {
+		res.json({result:req.parameters,saluti:'ciao!'});
+	}
+	catch(e) {
+		res.json({error:""+e});
 
-	})
+	}
   }

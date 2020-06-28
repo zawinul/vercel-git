@@ -12,7 +12,7 @@
 	<script>
 		function onStart(){
 			var x = Math.floor(Math.random()*100+1);
-			$.getJSON("api/fattoriale?x=f"+x).then(function(data) {
+			$.getJSON("api/fattoriale?x="+x).then(function(data) {
 				$('.out').text(x+"! = "+data.result);
 			});
 		}
