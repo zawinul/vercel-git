@@ -5,10 +5,6 @@ module.exports = (req, res) => {
 		var x = req.query.x;
 
 		res.json({
-			p:req.params,
-			q:req.query,
-			saluti:'ciao!', 
-			a:28,
 			result:fact(x-0);
 		});
 	}

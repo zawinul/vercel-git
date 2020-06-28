@@ -10,6 +10,9 @@
 	</script>
 	<title>prova vercel git</title>
 	<script>
+		
+		$.ajaxSetup({ cache: false });
+
 		function onStart(){
 			var x = Math.floor(Math.random()*100+1);
 			$.getJSON("api/fattoriale?x="+x).then(function(data) {
@@ -21,7 +24,7 @@
 </head>
 <body>
 	<h1>
-		prova vercel git 3 (api ?x=)
+		prova vercel git 4 (api ?x=)
 	</h1>
 	<div class="out"></div>
 </body>
