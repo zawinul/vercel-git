@@ -17,11 +17,11 @@
 			var x = Math.floor(Math.random()*100+1);
 			var u1 = "api/fattoriale?x="+x;
 			$.getJSON(u1).then(function(data) {
-				$('.out').text("url="+u1+"\n "+x+"! = "+data.result+"\n\n");
+				$('.out').text("url="+u1+"\n"+x+"! = "+data.result+"\n\n");
 			});
 			var u2 = "api/fattoriale2/"+x;
 			$.getJSON(u2).then(function(data) {
-				$('.out2').text("url="+u1+"\n "+x+"! = "+data.result+"\n\n");
+				$('.out2').text("url="+u2+"\n"+x+"! = "+data.result+"\n\n");
 			});
 		}
 		$(onStart);
