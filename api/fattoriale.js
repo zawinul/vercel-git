@@ -5,11 +5,15 @@ module.exports = (req, res) => {
 		var x = req.query.x;
 
 		res.json({
-			result:fact(x-0);
+			result:fact(x-0)
 		});
 	}
 	catch(e) {
-		res.json({error:""+e});
+		res.json({
+			q: req.query,
+			p: req.params,
+			error: ""+e
+		});
 
 	}
   }
