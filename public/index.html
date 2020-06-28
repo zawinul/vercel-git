@@ -17,11 +17,11 @@
 			var x = Math.floor(Math.random()*100+1);
 			var u1 = "api/fattoriale?x="+x;
 			$.getJSON(u1).then(function(data) {
-				$('.out').text(u1+": "+x+"! = "+data.result);
+				$('.out').text("url="+u1+"\n "+x+"! = "+data.result+"\n\n");
 			});
 			var u2 = "api/fattoriale2/"+x;
 			$.getJSON(u2).then(function(data) {
-				$('.out2').text(u2+": "+x+"! = "+data.result);
+				$('.out2').text("url="+u1+"\n "+x+"! = "+data.result+"\n\n");
 			});
 		}
 		$(onStart);
@@ -31,6 +31,6 @@
 	<h1>
 		prova vercel git 5 (fattoriale?x= and fattoriale2/x )
 	</h1>
-	<div class="out"></div>
-	<div class="out2"></div>
+	<pre class="out"></pre>
+	<pre class="out2"></pre>
 </body>
