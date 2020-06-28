@@ -18,6 +18,9 @@
 			$.getJSON("api/fattoriale?x="+x).then(function(data) {
 				$('.out').text(x+"! = "+data.result);
 			});
+			$.getJSON("api/fattoriale2/"+x).then(function(data) {
+				$('.out2').text(x+"! = "+data.result);
+			});
 		}
 		$(onStart);
 	</script>
@@ -27,4 +30,5 @@
 		prova vercel git 4 (api ?x=)
 	</h1>
 	<div class="out"></div>
+	<div class="out2"></div>
 </body>
